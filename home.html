@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Biodata</title>
+    <style>
+       /* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    color: #333;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ff69b4;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Headers */
+h2 {
+    font-size: 28px;
+    color: #ff69b4;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Profile Image Circle */
+.profile-container {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    opacity: 20;
+    animation: slideInFromTop 2s ease-out, zoomIn 1s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.profile-container:hover .profile-img {
+    transform: scale(1.1) rotate(10deg);
+    transition: all 0.3s ease;
+}
+
+/* Section Animations */
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to sections */
+#home {
+    animation: fadeInBottom 1s ease-out forwards;
+}
+
+  /* Education*/ 
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #f8c5d4; /* Light Pink Border */
+        }
+
+        th {
+            background-color: #ff6b81; /* Medium Pink for headers */
+            color: white;
+        }
+
+
+/* Section Backgrounds */
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+.next-section-button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.next-section-button:hover {
+    background-color: #e0568c;
+}
+
+/* Explore More Button Styling */
+.explore-more {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explore-more:hover {
+    background-color: #e0568c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .friends div, .fav-things div {
+        width: 45%;
+    }
+
+    .gallery img {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .friends div, .fav-things div {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* Gallery Image Styling */
+.gallery-img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+/* Background Image for the Welcome Section */
+#biodata {
+    background-image: url('background-image.jpg');
+    background-size: normal;
+    background-position: center;
+    color: white; /* Ensure text is readable */
+    padding: 50px;
+    text-align: center;
+
+}
+
+/* Background Image for the family Section */
+#family {
+    position: relative;
+    background-image: url('back-upp.jpg'); /* Your image path here */
+    background-size: normal; /* Ensures the background image covers the entire section */
+    background-position: center;
+    color: white; /* Ensures text is readable */
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* Semi-transparent Overlay */
+#family::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1; /* Place overlay behind text */
+}
+
+/* Make the family Section Links More Readable */
+#family a {
+    color: #ff69b4; /* Add a color for the links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#family a:hover {
+    color: #e0568c; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+}
+
+/* Background Image for the Contact Section */
+#contact {
+    position: relative;
+    background-image: url('back-up.jpg'); /* Your image path here */
+    background-size: normal; /* Ensures the background image covers the entire section */
+    background-position: center;
+    color: white; /* Ensures text is readable */
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* Semi-transparent Overlay */
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1; /* Place overlay behind text */
+}
+
+/* Make the Contact Section Links More Readable */
+#contact a {
+    color: #ff69b4; /* Add a color for the links */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #e0568c; /* Change link color on hover */
+    text-decoration: underline;
+}
+
+#gallery {
+    background-image: url('background-image.jpg'); /* Ensure the path is correct */
+    background-size: normal; /* Ensures the background image covers the entire section */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling (optional) */
+    color: white; /* Ensures text remains readable */
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('back-back.jpg'); /* Correctly set the background image */
+    background-size: normal;
+    background-position: center;
+    color: white; /* Ensure text is readable */
+    padding: 100px;
+    text-align: center;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Other Styles... */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the gallery images */
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieynazman Vlog</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8d7e8;
+            margin: 0;
+            padding: 0;
+            color: #4b006e;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            color: #4b006e;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #ffadeb;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #ff69b4;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #8c0063;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #ff69b4;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffe6f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-out;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-info.visible {
+            opacity: 1;
+        }
+
+        .contact-info div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 30px;
+            color: #4b006e;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-info i:hover {
+            transform: scale(1.2);
+            color: #ff69b4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ffadeb;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+            color: #8c0063;
+        }
+
+        footer a {
+            color: #4b006e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#Education">Education</a>
+        <a href="#family">Family</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact me</a>
+    </nav>
+
+    <!-- Profile Image with Video Background -->
+    <div class="container">
+        <div class="profile-container">
+            <video autoplay muted loop>
+                <source src="your-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="gallery/three.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="container">
+        <section id="biodata">
+            <h2>Welcome Dieyna Here!!!</h2>  
+<a href="biodata.html" class="explore-more">push me!</a>
+  
+        </section>
+    </div>
+
+    <!-- Education Section -->
+    <div class="container">
+        <section id="Education">
+            <h2>Education</h2>
+ <table>
+        <tr>
+            <th>Highschool</th>
+            <td>SMK MACHANG</td>
+        </tr>
+        <tr>
+            <th>Institution</th>
+            <td>Universiti Teknologi MARA Machang, Kelantan</td>
+        </tr>
+        <tr>
+            <th>End of Year</th>
+            <td>2025</td>
+        </tr>
+    </table>
+
+            <div class="container">
+
+                <a href="experience.html" class="explore-more"> Click for Expereience :) </a>
+            </div>
+        </section>
+    </div>
+
+ <!-- Family Section -->
+<div class="container">
+    <section id="family">
+        <h2>Family Members</h2>
+        
+        <!-- Family Photo -->
+        <div class="family-photo">
+            <img src="gallery/tujuh.jpg" alt="Family Photo" class="family-img">
+        </div>
+
+        <ul>
+            <li><strong>Mother:</strong> Nur Amani Binti Jaafar @ Mustafa</li>
+            <li><strong>Father:</strong> Norazman Bin Ismail</li>
+            <li><strong>Siblings:</strong>
+                <ul>
+                    <li>Muhammad Anif Izzuddin Bin Norazman</li>
+                    <li>Nurul Irdina Binti Norazman</li>
+                    <li>Nurul Asyiqin Binti Norazman</li>
+                    <li>Siti Musfirah Binti Norazman</li>
+                    <li>Muhammad Afiq Harraz Bin Norazman</li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Family Section Explore More Button -->
+        <a href="first.html" class="explore-more">About Us</a>
+    </section>
+</div>
+
+<!-- CSS -->
+<style>
+#family {
+    color: black; /* Changes the text color to black */
+}
+
+#family h2, #family ul li {
+    color: black; /* Ensures all family section headings and list items have black text */
+}
+
+#family strong {
+    color: black; /* Ensures that the strong text (e.g., "Mother:", "Father:") is also black */
+}
+
+.family-photo {
+    text-align: center; /* Centers the family photo */
+    margin-bottom: 20px;
+}
+
+.family-img {
+    width: 100%; /* Makes the image full width */
+    max-width: 500px; /* Limits the image width to 500px */
+    height: auto; /* Maintains the image aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+</style>
+
+
+
+
+              
+    <!-- Gallery Section -->
+    <div class="container">
+        <section id="gallery">
+            <h2>Dieynazman Story❤️</h2>
+            <div class="gallery">
+                <img src="gallery/ten.jpg" width="100" height="125" alt="ten" class="gallery-img">
+                <img src="gallery/dua.jpg" width="100" height="125" alt="dua" class="gallery-img">
+                <img src="gallery/three.jpg" width="100" height="125" alt="three" class="gallery-img">
+                <img src="gallery/eight.jpg" width="100" height="125" alt="eight" class="gallery-img">
+                <img src="gallery/six.jpg" width="100" height="125" alt="six" class="gallery-img">
+                <img src="gallery/dina.jpg" width="100" height="125" alt="dina" class="gallery-img">
+            </div>
+            <a href="gallery.html" class="explore-more">cuteness🎔</a>
+        </section> 
+    </div>
+
+<div class="music-item">
+                <h4>Ela Eynak</h4>
+               <audio controls>
+  <source src="audio.ogg" type="audio/ogg">
+  <source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <section id="contact">
+            <h2>Contact me</h2>
+            <p>You can contact me through my email: <a href="mailto:irdinan288@gmail.com">irdinan288@gmail.com</a></p>
+            <p>Or reach out via social media:</p>
+            <ul>
+             <div>  
+             <a href="https://www.tiktok.com/@iynaasyaf.f?_t=8sMvTMfvQn6&_r=1==/">Visit My Tiktok</a>
+</div>
+<div>
+	     <a href="https://www.instagram.com/dieynazman_/profilecard/?igsh=MXZ0bnZnODI4MWI1Ng==/">Visit My Instagram</a>
+</div>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
+
+
+

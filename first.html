@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieynazman Story Gallery</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Georgia, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Gallery Section Styles */
+        #gallery {
+            background: url('back-back.jpg') no-repeat center center/cover; /* Background Image */
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        #gallery h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .explore-more {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff1493; /* Pink color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .explore-more:hover {
+            background-color: #ff69b4;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #gallery h2 {
+                font-size: 2em; /* Slightly smaller header font */
+            }
+
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-img {
+                width: 100px;
+                height: 120px;
+            }
+
+            .explore-more {
+                font-size: 1em; /* Smaller button on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Gallery Section -->
+    <div class="container">
+        <section id="gallery">
+            <h2>Family Moments</h2>
+            <div class="gallery">
+                <img src="gallery/f1.jpg" alt="Image 1 of Dieynazman Story" class="gallery-img">
+                <img src="gallery/f2.jpg" alt="Image 2 of Dieynazman Story" class="gallery-img">
+                <img src="gallery/f4.jpg" alt="Image 3 of Dieynazman Story" class="gallery-img">
+                <img src="gallery/f5.jpg" alt="Image 4 of Dieynazman Story" class="gallery-img">
+                <img src="gallery/tujuh.jpg" alt="Image 5 of Dieynazman Story" class="gallery-img">
+                <img src="gallery/f3.jpg" alt="Image of Dina from Dieynazman Story" class="gallery-img">
+            </div>
+      
+        </section> 
+    </div>
+</body>
+</html>
+

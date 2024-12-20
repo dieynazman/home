@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Biodata</title>
+    <style>
+        body {
+            font-family: georgia; /* Corrected font-family */
+            background-color: #ffe4e1; /* Light pink background */
+            color: #4b0082; /* Deep purple text */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic; /* Apply italic font style */
+        }
+
+        .container {
+            background-color: #fff0f5; /* Lavender blush background for the box */
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .header {
+            font-size: 2.5em;
+            color: #ff1493; /* Soft pink color */
+            margin-bottom: 20px;
+        }
+
+        .biodata-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .biodata-list li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ffb6c1; /* Light pink background for list items */
+            border-radius: 8px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .biodata-list li span {
+            font-weight: bold;
+            color: #ff69b4; /* Hot pink color for labels */
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        .gallery-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make image circular */
+            margin-bottom: 20px;
+            transition: transform 0.5s ease; /* Add transition for motion effect */
+        }
+
+        .gallery-img:hover {
+            transform: rotate(90deg); /* Rotate image on hover for motion effect */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">ABOUT ME<span class="emoji"></span></div>
+        <img src="gallery/ten.jpg" alt="Profile Picture" class="gallery-img">
+
+        <ul class="biodata-list">
+            <li><span>Hello there! My Full Name is </span> 🎔Nurul Irdina Binti Norazman🎔</li>
+            <li><span>I'm Official:</span> 20 🎔</li>
+            <li><span>My Birthdate:</span> 🎔28|November|2004🎔</li>
+            <li><span>Home Address:</span> C/10 Bandar Lama, 18500 Machang Kelantan 🎔</li>
+            <li><span>My Phone Number:</span> 🎔017-954-6054🎔</li>
+            <li><span>I'm:</span> Muslim 🎔</li>
+        </ul>
+    </div>
+<div class="music-item">
+                <h4>Ela Eynak</h4>
+               <audio controls>
+  <source src="audio.ogg" type="audio/ogg">
+  <source src="audio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+</body>
+</html>
+

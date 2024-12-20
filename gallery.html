@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieynazman Vlog</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8d7e8;
+            margin: 0;
+            padding: 0;
+            color: #4b006e;
+        }
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            color: #4b006e;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #ffadeb;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #ff69b4;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #8c0063;
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #ff69b4;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Photo Gallery Styling */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .photo-gallery .gallery-item {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-gallery .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffe6f1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1.5s ease-out;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-info.visible {
+            opacity: 1;
+        }
+
+        .contact-info div {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-info i {
+            font-size: 30px;
+            color: #4b006e;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .contact-info i:hover {
+            transform: scale(1.2);
+            color: #ff69b4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ffadeb;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+            color: #8c0063;
+        }
+
+        footer a {
+            color: #4b006e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Dieynazman</h1>
+            <p>Hello My name is Nurul Irdina, I inlove with flowers especially red roses!</p>
+        </header>
+
+        
+
+        <!-- Dieyna Section -->
+        <section>
+            <h2>Photo Gallery</h2>
+            <div class="photo-gallery">
+                <img src="gallery/empat.jpg" alt="Photo 1" class="gallery-item">
+                <img src="gallery/eleven.jpg" alt="Photo 2" class="gallery-item">
+                <img src="gallery/five.jpg" alt="Photo 3" class="gallery-item">
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section>
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: irdinan288@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>Phone: +0617-954-6054</p>
+                </div>
+                <div>
+                    <i class="fas fa-location-arrow"></i>
+                    <p>Location: Machang, Kelantan</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Created by Dieynazman❤️ | <a href="https://wa.me/60179546054/"><img src="gallery/wsp.jpg" alt="Contact Us Button" width="50" height="50" align="right" border="2"></a></p>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const contactInfo = document.querySelector('.contact-info');
+            const contactInfoPosition = contactInfo.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            // When contact-info is in the viewport, add class 'visible'
+            if (contactInfoPosition < screenHeight) {
+                contactInfo.classList.add('visible');
+            }
+        });
+    </script>
+
+</body>
+</html>
